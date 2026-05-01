@@ -40,12 +40,15 @@ class TestSearch(unittest.TestCase):
 
     def test_search_on_empty_tree(self):
         self.tree = None
-        self.assertEqual
+        self.assertEqual(search(self.tree, 4), False)
         pass
 
 
 class TestInsert(unittest.TestCase):
     def test_insert_into_empty_tree(self):
+        self.tree = None
+        result = insert(self.tree, 3)
+        self.assertEqual(result.val, 3)
         pass
 
     def test_insert_new_value_in_correct_position(self):
