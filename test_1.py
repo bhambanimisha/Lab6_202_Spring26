@@ -22,9 +22,25 @@ class TestSearch(unittest.TestCase):
         pass
 
     def test_search_returns_false_for_missing_value(self):
+        self.tree = Node(
+            8,
+            Node(
+                3,
+                Node(1),
+                Node(6)
+            ),
+            Node(
+                10,
+                None,
+                Node(14)
+            )
+        )
+        self.assertEqual(search(self.tree, 5), False)
         pass
 
     def test_search_on_empty_tree(self):
+        self.tree = None
+        self.assertEqual
         pass
 
 
