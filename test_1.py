@@ -5,6 +5,20 @@ from lab6_1 import Node, search, insert, delete
 
 class TestSearch(unittest.TestCase):
     def test_search_finds_existing_value(self):
+        self.tree = Node(
+            8,
+            Node(
+                3,
+                Node(1),
+                Node(6)
+            ),
+            Node(
+                10,
+                None,
+                Node(14)
+            )
+        )
+        self.assertEqual(search(self.tree, 1), True)
         pass
 
     def test_search_returns_false_for_missing_value(self):
