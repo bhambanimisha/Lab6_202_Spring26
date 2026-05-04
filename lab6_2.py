@@ -30,5 +30,14 @@ def postorder(tree: Optional[Node]) -> list[int]:
 
 
 def bfs(tree: Optional[Node]) -> list[int]:
+    q: list[Node] = [tree]
 
-    pass
+    result = []
+    while q:
+        current = q.pop(0)
+        if current is not None:
+            result.append(current.val)
+            q.append(current.left)
+            q.append(current.right)
+
+    return result
